@@ -1,0 +1,23 @@
+﻿@using Dash.Models
+
+@model LoginViewModel
+
+@using (Html.BeginForm("Login", "User"))
+{
+    <h1>LogIn</h1><br />
+
+    @ViewBag.UserId <br /><br/>
+
+    @Html.LabelFor(x => x.UserID)
+    @Html.EditorFor(x=> x.UserID)
+    @Html.ValidationMessageFor(x => x.UserID)
+    <br /><br />
+
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password)
+    @Html.ValidationMessageFor(x => x.Password)
+    <br /><br />
+    
+
+    <input type="submit" value="Sign In" />
+}

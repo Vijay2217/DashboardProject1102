@@ -1,0 +1,37 @@
+﻿@using Dash.Models
+
+@model RegisterUserViewModel
+
+@using (Html.BeginForm("Create", "User"))
+{
+    <h1>Register</h1>
+
+    @Html.LabelFor(x => x.FirstName)
+    @Html.EditorFor(x => x.FirstName)
+    @Html.ValidationMessageFor(x => x.FirstName)
+    <br />
+    <br />
+
+    @Html.LabelFor(x => x.LastName)
+    @Html.EditorFor(x => x.LastName)
+    @Html.ValidationMessageFor(x => x.LastName)
+    <br />
+    <br />
+
+
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password)
+    @Html.ValidationMessageFor(x => x.Password)
+    <br />
+    <br />
+
+    @Html.LabelFor(x => x.ConfirmPassword)
+    @Html.PasswordFor(x => x.ConfirmPassword)
+    @Html.ValidationMessageFor(x => x.ConfirmPassword)
+    <br />
+    <br />
+
+    @Html.ActionLink("LogIn", "Login")
+
+    <input type="submit" value="register" />
+}
